@@ -46,9 +46,9 @@ public class Percolation {
             }
             // if site on the last row is opened, it's connected to the virtual bottom
             if (row == this.n) {
-                union.union(xyTo1D(row, col), (n * n - 1));
+                union.union(xyTo1D(row, col), (n * n + 1));
             }
-            // if site above / above is opened, connect to it
+            // if site above / below is opened, connect to it
             if (row > 1 && isOpen(row - 1, col)) {
                 union.union(xyTo1D(row, col), xyTo1D(row - 1, col));
             }
