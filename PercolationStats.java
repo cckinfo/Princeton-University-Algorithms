@@ -4,6 +4,7 @@
  *  Last modified:     1/1/2019
  **************************************************************************** */
 
+import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.StdStats;
 
@@ -47,9 +48,9 @@ public class PercolationStats {
         int N = Integer.parseInt(args[0]);
         int T = Integer.parseInt(args[1]);
         PercolationStats percolationStats = new PercolationStats(N, T);
-        System.out.println("The Mean is-->" + percolationStats.mean());
-        System.out.println("The Standard Deviation is-->" + percolationStats.stddev());
-        System.out.println("The 95% confidence interval is-->" + percolationStats.confidenceLo() + ", "
+        StdOut.println("The Mean is-->" + percolationStats.mean());
+        StdOut.println("The Standard Deviation is-->" + percolationStats.stddev());
+        StdOut.println("The 95% confidence interval is-->" + percolationStats.confidenceLo() + ", "
                                    + percolationStats.confidenceHi());
     }
 }
