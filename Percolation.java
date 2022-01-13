@@ -79,7 +79,7 @@ public class Percolation {
 
     // does the system percolate?
     public boolean percolates() {
-        return union.find(0) == union.find(n * n - 1);
+        return union.find(0) == union.find(n * n + 1);
     }
 
     // // test client (optional)
