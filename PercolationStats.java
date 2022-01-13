@@ -44,12 +44,13 @@ public class PercolationStats {
         return mean() + (1.96 * stddev() / Math.sqrt(results.length));
     }
     public static void main(String[] args) {
-        int N = 200;
-        int T = 100;
-        PercolationStats stats = new PercolationStats(N, T);
-
-        System.out.println("mean\t\t\t= " + stats.mean());
-        System.out.println("stddev\t\t\t= " + stats.stddev());
-        System.out.println("95% confidence interval\t= " + stats.confidenceLo() + ", " + stats.confidenceHi());
+        int N = Integer.parseInt(args[0]);
+        int T = Integer.parseInt(args[1]);
+        PercolationStats percolationStats = new PercolationStats(N, T);
+        System.out.println("The Mean is-->" + percolationStats.mean());
+        System.out.println("The Standard Deviation is-->" + percolationStats.stddev());
+        System.out.println("The 95% confidence interval is-->" + percolationStats.confidenceLo() + ", "
+                                   + percolationStats.confidenceHi());
     }
 }
+
