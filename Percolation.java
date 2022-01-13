@@ -21,12 +21,12 @@ public class Percolation {
         union = new WeightedQuickUnionUF(n * n + 2);
     }
     // top left row is supposed to be (1|1), not (0|0), so we check the bounds
-    public void checkBounds(int row, int col) {
+    private void checkBounds(int row, int col) {
         if (row < 1 || col < 1 || row > this.n || col > this.n) {
             throw new IndexOutOfBoundsException();
         }
     }
-    public int xyTo1D(int row, int col) {
+    private int xyTo1D(int row, int col) {
         checkBounds(row, col);
         return (row - 1) * this.n + col;
     }

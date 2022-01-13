@@ -21,7 +21,7 @@ public class PercolationStats {
             results[i] = calculateResults(n);
         }
     }
-    public double calculateResults(int n) {
+    private double calculateResults(int n) {
         Percolation perc = new Percolation(n);
         while (!perc.percolates()) {
             int i = StdRandom.uniform(1, n + 1);
