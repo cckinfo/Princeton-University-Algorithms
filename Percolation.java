@@ -1,13 +1,10 @@
 import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 
 public class Percolation {
-    public static void main(String[] args) {
-    }
-    private int n;
-    private boolean[][] opened;
+    private final WeightedQuickUnionUF union;
+    private final int n;
     private int numberOpened;
-    private WeightedQuickUnionUF union;
-
+    private boolean[][] opened;
     // creates n-by-n grid, with all sites initially blocked
     public Percolation(int n) {
         if (n <= 0 ) {
@@ -82,6 +79,4 @@ public class Percolation {
         return union.find(0) == union.find(n * n + 1);
     }
 
-    // // test client (optional)
-    // public static void main(String[] args)
 }
